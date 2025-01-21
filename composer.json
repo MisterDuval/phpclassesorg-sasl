@@ -1,5 +1,6 @@
 {
 	"name" : "misterduval/phpclassesorg-sasl",
+	"minimum-stability": "dev",
 	"require": {
     		"php": ">=7.4"
 	},
