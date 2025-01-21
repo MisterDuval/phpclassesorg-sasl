@@ -1,4 +1,5 @@
 {
+	"name" : "misterduval/phpclassesorg-sasl",
 	"autoload":
 	{
 		"classmap": ["sasl.php", "plain_sasl_client.php", "login_sasl_client.php", "cram_md5_sasl_client.php", "ntlm_sasl_client.php", "basic_sasl_client.php", "digest_sasl_client.php", "xoauth2_sasl_client.php"]
