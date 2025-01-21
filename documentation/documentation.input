@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+     @(#) $Id: documentation.input,v 1.1 2004/10/05 04:09:05 mlemos Exp $
+  -->
+<input>
+
+ <includeonce>include/program.input</includeonce>
+ <includeonce>include/expressions.input</includeonce>
+ <includeonce>include/document.input</includeonce>
+
+ <object>
+  <name>build</name>
+  <class>build</class>
+  <attributes>
+
+   <bindings>include/php.bindings</bindings>
+   <targetlanguage>PHP</targetlanguage>
+
+   <target>
+    <name>all</name>
+    <dependency>files/sasl.files</dependency>
+    <action>
+
+     <echo>Built <targetname /> .<linefeed /></echo>
+
+    </action>
+   </target>
+
+   <target>
+    <name>clean</name>
+    <action>
+
+     <echo>Cleaning...</echo>
+
+     <echo><tab />Removing generated files files/sasl.files ...</echo>
+     <removegenerated><list>files/sasl.files</list></removegenerated>
+
+     <echo>Built <targetname /> .<linefeed /></echo>
+
+    </action>
+   </target>
+
+   <filestarget>
+    <name>files/sasl.files</name>
+    <source>
+     <name>output</name>
+     <file>documentation/html.output</file>
+    </source>
+    <source>
+     <name>input</name>
+     <file>sasl.input</file>
+    </source>
+    <source>
+     <name>metadocument</name>
+     <file>../sasl.php</file>
+    </source>
+    <action>
+
+     <echo>Building <targetname /> ...</echo>
+
+     <listtargetfiles>
+
+      <echo>Extracting from meta-document <source>metadocument</source> ...</echo>
+      <extractmetadocument>
+       <source><source>metadocument</source></source>
+       <target>sasl.class</target>
+      </extractmetadocument>
+      <echo>Extracted sasl.class .</echo>
+
+      <echo>Compiling <source>input</source> ...</echo>
+      <compile>
+       <output><source>output</source></output>
+       <input><source>input</source></input>
+      </compile>
+     </listtargetfiles>
+
+     <echo>Built <targetname /> .<linefeed /></echo>
+
+    </action>
+   </filestarget>
+
+  </attributes>
+ </object>
+
+ <includeonce>include/build.input</includeonce>
+
+</input>

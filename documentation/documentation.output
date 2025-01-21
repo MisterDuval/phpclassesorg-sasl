@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+     @(#) $Id: documentation.output,v 1.1 2004/10/05 04:09:05 mlemos Exp $
+  -->
+<output>
+
+ <build><programarguments /></build>
+
+</output>

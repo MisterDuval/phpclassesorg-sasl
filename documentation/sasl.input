@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+     @(#) $Id: sasl.input,v 1.1 2004/10/05 04:09:05 mlemos Exp $
+  -->
+<input>
+
+ <include>include/expressions.input</include>
+ <include>include/flow.input</include>
+ <include>include/document.input</include>
+ <include>documentation/html.input</include>
+
+ <function>
+  <name>classname</name>
+  <object>expressions</object>
+  <call>data</call>
+  <arguments>sasl_class</arguments>
+ </function>
+
+ <function>
+  <name>classpath</name>
+  <object>expressions</object>
+  <call>data</call>
+  <arguments>.</arguments>
+ </function>
+
+ <function>
+  <name>classobject</name>
+  <object>expressions</object>
+  <call>data</call>
+  <arguments>sasl_class</arguments>
+ </function>
+
+ <function>
+  <name>documentationidiom</name>
+  <object>expressions</object>
+  <call>data</call>
+  <arguments>en</arguments>
+ </function>
+
+ <function>
+  <name>outputpath</name>
+  <object>expressions</object>
+  <call>data</call>
+  <arguments>.</arguments>
+ </function>
+
+ <include>documentation/classcommon.input</include>
+
+</input>
